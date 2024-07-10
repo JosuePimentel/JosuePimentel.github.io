@@ -1,0 +1,27 @@
+<main class="w-[60%] mx-[20%] min-h-screen dark:bg-gray border-[0.5px] dark:border-gray shadow-boxShadow dark:shadow-white border-solid text-white rounded-md mb-14 relative px-40 py-14 flex flex-col gap-14">
+  <div class="">
+    <app-photo-rounded/>
+  </div>
+
+  <p class="w-[500px] max-w-full text-2xl font-semibold rounded-sm text-justify"> <span class="text-secondaryColor">Olá! Meu nome é Josué Pimentel,</span> sou Ciêntista da computação, Maker e Desenvolvedor Front-end.</p>
+
+  <p class="w-[500px] max-w-full text-lightGray text-base text-justify"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, enim quam nostrum perferendis asperiores soluta molestias vitae sed, pariatur, provident amet dolorem. Est pariatur voluptatibus architecto itaque dicta inventore autem. </p>
+
+  <div class="flex gap-5">
+    @for (item of socialMedia; track $index) {
+      <app-social-media
+        [socialLink]="item.link"
+        [socialSVG]="item.svg"
+      />
+    }
+  </div>
+
+  <div class="flex justify-center items-center gap-16 relative top-0 ">
+    @for (item of photos; track $index) {
+      <app-card-photo
+        [img]="item"
+        class="{{$index % 2 == 0 ? 'rotate-3' : '-rotate-3'}}"
+      />
+    }
+  </div>
+</main>

@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border select-none font-default appearance-none transition-all duration-150;
+    outline: none;
+    border: none;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-[10px] bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primaryColor h-[80px];
+  }
+}
+
+@layer components {
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  }
+
+  .active {
+    @apply before:content-[''] before:block before:w-full before:h-[2px] before:rounded-sm before:bg-white before:absolute before:bottom-0 before:left-0;
+  }
+
+  .colorSVG svg {
+    @apply hover:fill-white dark:fill-lightGray;
+  }
+
+  .desapear {
+    @apply scale-90;
+  }
+}

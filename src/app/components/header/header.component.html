@@ -1,0 +1,23 @@
+<header
+  class="flex p-5 h-20 w-[60%] justify-evenly items-center dark:bg-gray border-[0.5px] dark:border-gray shadow-boxShadow dark:shadow-white border-solid text-white rounded-md my-14 mx-[20%] box-border"
+>
+  <ul class="flex items-center justify-center gap-6">
+    @for (button of buttons; track $index) {
+    <li
+      [routerLink]="button.router"
+      routerLinkActive="active"
+      class="cursor-pointer relative py-3 px-0.5 hover:active"
+    >
+      {{ button.translante }}
+    </li>
+    }
+  </ul>
+
+  <div class="flex content-between items-center gap-7">
+    <app-dark-mode class="flex" />
+
+    <div class="flex content-between items-center">
+      <span class="material-symbols-outlined cursor-pointer"> language </span>
+    </div>
+  </div>
+</header>
