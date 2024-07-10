@@ -36,12 +36,17 @@ export class HomeComponent implements OnInit{
   ];
 
   allPhotos: string[] = [
-    "bg-[url('/assets/media/photo/me-2.jpg')]",
-    "bg-[url('/assets/media/photo/me-3.jpg')]",
-    "bg-[url('/assets/media/photo/me-4.jpg')]",
-    "bg-[url('/assets/media/photo/me-5.jpg')]",
-    "bg-[url('/assets/media/photo/me-6.jpg')]",
-    "bg-[url('/assets/media/photo/me-7.jpg')]",
+    "bg-[url('/assets/media/photo/photo-5.jpg')]",
+    "bg-[url('/assets/media/photo/photo-9.jpg')]",
+    "bg-[url('/assets/media/photo/photo-1.jpg')]",
+    "bg-[url('/assets/media/photo/photo-4.jpg')]",
+    "bg-[url('/assets/media/photo/photo-7.jpg')]",
+    "bg-[url('/assets/media/photo/photo-10.jpg')]",
+    "bg-[url('/assets/media/photo/photo-8.jpg')]",
+    "bg-[url('/assets/media/photo/photo-3.jpg')]",
+    "bg-[url('/assets/media/photo/photo-11.jpg')]",
+    "bg-[url('/assets/media/photo/photo-2.jpg')]",
+    "bg-[url('/assets/media/photo/photo-6.jpg')]",
   ];
 
 
@@ -63,9 +68,10 @@ export class HomeComponent implements OnInit{
     let copyPhotos = this.allPhotos;
     let numRandom: number;
     while(this.quantityPhotosToTake--) {
-      numRandom = this.random(this.quantityPhotosToTake);
+      numRandom = this.random(copyPhotos.length-1);
+      console.log(copyPhotos.length);
       this.photos.push(copyPhotos[numRandom]);
-      copyPhotos.splice(numRandom, numRandom);
+      copyPhotos.splice(numRandom, 1);
     }
   }
 

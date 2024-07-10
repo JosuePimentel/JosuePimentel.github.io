@@ -16,10 +16,12 @@ export class EventsElementModel {
   }
 
   calcHowMuchPhotosToTake(id: string): number {
-    let ele = window.document.getElementById(id);
-    let eleInfoRect = this.getInfoRectEle(ele!);
-
-    return Math.floor((eleInfoRect!.width - eleInfoRect!.width*.2)/270.72);
+    if (isPlatformBrowser(this.platformId)) {
+      let ele = window.document.getElementById(id);
+      let eleInfoRect = this.getInfoRectEle(ele!);
+      return Math.floor((eleInfoRect!.width - eleInfoRect!.width*.2)/270.72);
+    }
+    return 0;
   }
 
   setEventToDesapear(id: string, classe: string): void {
