@@ -32,6 +32,6 @@
   }
 
   .desapear {
-    @apply scale-90;
+    @apply scale-75;
   }
 }
