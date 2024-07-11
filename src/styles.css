@@ -34,4 +34,17 @@
   .desapear {
     @apply scale-75;
   }
+
+  .activeFooter {
+    @apply text-white;
+  }
+
+  .separator {
+    border-top: 1px solid;
+    @apply border-t-lightGray;
+  }
+
+  .apear {
+    @apply block;
+  }
 }

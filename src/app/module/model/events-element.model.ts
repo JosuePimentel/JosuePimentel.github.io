@@ -24,22 +24,37 @@ export class EventsElementModel {
     return 0;
   }
 
-  setEventToDesapear(id: string, classe: string): void {
+  setEventToDesapear(id: string, classe: string, gap: number = 50): void {
     if (isPlatformBrowser(this.platformId)) {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      });
-
       let topWindow;
       let ele = window.document.getElementById(id);
       let eleInfoRect = this.getInfoRectEle(ele!);
 
       //Parece que o pageYoffset seta a posição do topo, como a altura em que a pagina carregou, achar algo melhor
       window.document.addEventListener('scroll', (event: Event) => {
-        topWindow = window.pageYOffset;
+        topWindow = window.pageYOffset + gap;
         if (topWindow >= eleInfoRect!.y) ele?.classList.add(classe);
         else ele?.classList.remove(classe);
+      });
+    }
+  }
+
+  setEventToApearTop(id: string, Y: number, classe: string, classeToRemove: string) {
+    if (isPlatformBrowser(this.platformId)) {
+      let topWindow;
+      let ele = window.document.getElementById(id);
+
+      window.document.addEventListener('scroll', (event: Event) => {
+        topWindow = window.pageYOffset;
+        console.log(topWindow, Y)
+        if (topWindow >= Y) {
+          ele?.classList.add(classe);
+          ele?.classList.remove(classeToRemove);
+        }
+        else {
+          ele?.classList.remove(classe);
+          ele?.classList.add(classeToRemove);
+        }
       });
     }
   }

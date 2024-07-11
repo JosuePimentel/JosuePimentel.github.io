@@ -9,6 +9,7 @@ module.exports = {
       tertiaryColor: "#9a9088",
       quaternaryColor: "#80b0ab",
       quinaryColor: "#dbd1b3",
+      shadow: '#6f6f7629',
       transparent: "rgba(0, 0, 0, 0)",
       white: "#fff",
       black: '#000',

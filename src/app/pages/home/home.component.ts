@@ -62,7 +62,7 @@ export class HomeComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.eventsElement.setEventToDesapear('photo-rounded', 'desapear');
+    this.eventsElement.setEventToDesapear('photo-rounded', 'desapear', 150);
     this.quantityPhotosToTake = this.eventsElement.calcHowMuchPhotosToTake('body');
 
     let copyPhotos = this.allPhotos;

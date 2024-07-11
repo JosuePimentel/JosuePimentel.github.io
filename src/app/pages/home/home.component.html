@@ -1,4 +1,4 @@
-<main class="w-[60%] mx-[20%] min-h-screen dark:bg-gray border-[0.5px] dark:border-gray shadow-boxShadow dark:shadow-white border-solid text-white rounded-md mb-14 relative px-40 py-14 flex flex-col gap-14">
+<main class="w-full h-full relative flex flex-col gap-14">
   <div class="">
     <app-photo-rounded/>
   </div>
@@ -16,7 +16,7 @@
     }
   </div>
 
-  <div class="flex justify-center items-center gap-16 relative top-0 ">
+  <div class="flex justify-center items-center gap-16 relative top-0 mt-4">
     @for (item of photos; track $index) {
       <app-card-photo
         [img]="item"
