@@ -1,0 +1,7 @@
+<div class="w-full grid-cols-[repeat(auto-fill,minmax(300px,1fr))] grid gap-8">
+  @if (projects().length) { @for (item of projects(); track $index) {
+  <app-project-card [data]="item" />
+  } } @else {
+  <app-load />
+  }
+</div>

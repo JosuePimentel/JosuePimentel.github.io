@@ -24,6 +24,13 @@ export class ThemeModel {
   }
 
   changeActualTheme(): void {
-    if (isPlatformBrowser(this.platformId)) window.document.body.classList.toggle('dark');
+    if (isPlatformBrowser(this.platformId)) {
+      window.document.body.classList.toggle('dark');
+      if(!window.document.body.classList.contains('dark')) {
+        window.localStorage.removeItem('theme');
+      } else {
+        window.localStorage.setItem('theme', 'dark');
+      }
+    }
   }
 }

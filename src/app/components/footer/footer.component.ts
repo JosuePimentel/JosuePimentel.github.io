@@ -12,11 +12,11 @@ type button = { router: string; translante: string };
 export class FooterComponent {
   buttons: button[] = [
     {
-      router: '',
+      router: 'home',
       translante: 'Home',
     },
     {
-      router: 'project',
+      router: 'projects',
       translante: 'Projetos',
     },
     {

@@ -1,0 +1,23 @@
+<div class="w-full rounded-md relative overflow-hidden cursor-pointer group">
+  <div class="w-full h-full scale-125  group-hover:scale-100">
+    <img [src]="data!.image" alt="" class="object-cover">
+  </div>
+
+  <div class="py-4 flex items-center flex-col gap-3 w-full h-full dark:bg-gray opacity-85 absolute left-0 -top-96 group-hover:top-0 duration-500 dark:text-white">
+    <h5 class="font-bold text-base">{{data?.title}}</h5>
+    <p>{{data?.desc}}</p>
+    <div class="flex gap-2">
+      @if(data?.link?.web) {
+        <div class="p-2 rounded-full bg-white w-12 h-12 overflow-hidden flex items-center justify-center">
+          <a [href]="data?.link?.web" class="w-fit h-fit material-symbols-outlined dark:text-black">visibility</a>
+        </div>
+      }
+
+      @if(data?.link?.gitHub) {
+        <div class="p-2 rounded-full bg-white w-12 h-12 overflow-hidden flex items-center justify-center">
+          <a [href]="data?.link?.gitHub" class="w-fit h-fit material-symbols-outlined dark:text-black"><img src="src/assets/media/social/github.svg" alt=""></a>
+        </div>
+      }
+    </div>
+  </div>
+</div>

@@ -23,7 +23,6 @@ export class NavigationModel {
     if (isPlatformBrowser(this.platformId)) {
       let eleInfoRect = document.getElementById(id)?.getBoundingClientRect();
 
-      console.log(eleInfoRect);
       window.scrollTo({
         top: eleInfoRect?.x,
         behavior: 'smooth'

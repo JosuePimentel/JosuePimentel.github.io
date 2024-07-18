@@ -46,7 +46,6 @@ export class EventsElementModel {
 
       window.document.addEventListener('scroll', (event: Event) => {
         topWindow = window.pageYOffset;
-        console.log(topWindow, Y)
         if (topWindow >= Y) {
           ele?.classList.add(classe);
           ele?.classList.remove(classeToRemove);
