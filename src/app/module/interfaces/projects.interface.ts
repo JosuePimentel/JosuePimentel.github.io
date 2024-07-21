@@ -6,4 +6,5 @@ export interface ProjectsInterface {
   desc: string;
   link: LinksInterface;
   image: string;
+  type: string;
 }

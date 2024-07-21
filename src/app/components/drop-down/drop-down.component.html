@@ -1,0 +1,13 @@
+<div class="w-[120px] h-[40px] flex items-center rounded-md border-[2px] border-lightGray border-solid relative">
+  <div class="flex w-full px-3 py-1 items-center justify-between cursor-pointer" (click)="this.showDrop = !this.showDrop">
+    {{actualFilter}}
+    <span class="material-symbols-outlined">keyboard_arrow_down</span>
+  </div>
+
+  <ul class="absolute bg-gray left-0 w-full border-[2px] border-lightGray border-solid rounded-md z-10 {{showDrop ? 'opacity-100 top-[45px]' : 'top-[35px] opacity-0'}}">
+    @for (item of filters; track $index) {
+      <li class="px-3 py-1 hover:opacity-65 cursor-pointer" (click)="changeFilter(item)">{{item}}</li>
+    }
+  </ul>
+</div>
+

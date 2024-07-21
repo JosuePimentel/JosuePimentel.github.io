@@ -7,12 +7,12 @@ import { ProjectsInterface } from "../module/interfaces/projects.interface";
   providedIn: 'root'
 })
 
-export class ProjectsService {
+export class ProjectsWebService {
   private url = '/assets/json/projects.json';
 
   constructor(private http: HttpClient) {}
 
-  getProjects(): Observable<ProjectsInterface[]> {
-    return this.http.get<ProjectsInterface[]>(this.url);
+  getProjects() {
+    return this.http.get(this.url);
   }
 }

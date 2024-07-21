@@ -1,7 +1,19 @@
-<div class="w-full grid-cols-[repeat(auto-fill,minmax(300px,1fr))] grid gap-8">
-  @if (projects().length) { @for (item of projects(); track $index) {
-  <app-project-card [data]="item" />
-  } } @else {
+@if (filteredProjects().length) {
+  <div class="flex justify-between pb-10">
+    <h1 class="text-4xl font-bold flex items-center gap-3">Projetos <span class="text-lightGray text-base font-semibold">{{actualFilter}}</span></h1>
+
+    <app-drop-down
+      [filters]="filters"
+
+      (changeActualFilter)="changeActualFilter($event)"
+    />
+  </div>
+
+  <div class="w-full grid-cols-[repeat(auto-fill,minmax(300px,1fr))] grid gap-8">
+  @for (item of filteredProjects(); track $index) {
+      <app-project-card [data]="item" />
+    }
+  </div>
+} @else {
   <app-load />
-  }
-</div>
+}

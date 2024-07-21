@@ -1,26 +1,50 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { ProjectsInterface } from '../../module/interfaces/projects.interface';
-import { ProjectsService } from '../../services/projects.service';
+import { ProjectsWebService } from '../../services/projects-web.service';
 import { ProjectCardComponent } from '../../components/project-card/project-card.component';
 import { LoadComponent } from '../../components/load/load.component';
+import { DropDownComponent } from '../../components/drop-down/drop-down.component';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
   imports: [
     ProjectCardComponent,
-    LoadComponent
+    LoadComponent,
+    DropDownComponent
   ],
   templateUrl: './projects.component.html',
 })
 export class ProjectsComponent implements OnInit {
-  projects = signal<ProjectsInterface[]>([]);
+  allProjects: ProjectsInterface[] = [];
+  filteredProjects = signal<ProjectsInterface[]>([]);
+  actualFilter = '';
+  filters: string[] = [
+    'Todos',
+    'Web',
+    'Terminal'
+  ]
 
-  constructor(private service: ProjectsService) {}
+  constructor(private service: ProjectsWebService) {}
 
   ngOnInit(): void {
-    this.service.getProjects().subscribe((resp: ProjectsInterface[]) => {
-      this.projects.set(resp);
+    this.service.getProjects().subscribe((resp: any) => {
+      this.allProjects = resp
+      this.changeActualFilter('Todos')
     });
+  }
+
+  changeActualFilter(e: string) {
+    this.actualFilter = e;
+
+    if(this.actualFilter == 'Todos') {
+      this.filteredProjects.set(this.allProjects);
+    } else {
+      this.filteredProjects.set([]);
+      this.allProjects.forEach((ele: ProjectsInterface) => {
+        if(ele.type == this.actualFilter)
+          this.filteredProjects().push(ele);
+      });
+    }
   }
 }
