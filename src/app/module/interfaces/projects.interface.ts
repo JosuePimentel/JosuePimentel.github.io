@@ -7,4 +7,5 @@ export interface ProjectsInterface {
   link: LinksInterface;
   image: string;
   type: string;
+  tecnologies: string[];
 }

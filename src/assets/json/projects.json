@@ -7,28 +7,43 @@
       "gitHub": "https://github.com/JosuePimentel/huffman"
     },
     "image": "assets/media/photo/teste.png",
-    "type": "Web"
+    "type": "Web",
+    "tecnologies": [
+      "Angular",
+      "Typescript",
+      "HTML/CSS"
+    ]
   },
   {
     "id": "124",
     "title": "App Borders of CountriesTerminal",
-    "desc": "App to learn and improve my angular skills.",
+    "desc": "App to learn and improve my angular skills.App to learn and improve my angular skills.",
     "link": {
       "gitHub": "https://github.com/JosuePimentel/Country",
       "web": "https//countryborders.com"
     },
     "image": "assets/media/photo/teste.png",
-    "type": "Terminal"
+    "type": "Terminal",
+    "tecnologies": [
+      "Angular",
+      "Typescript",
+      "HTML/CSS"
+    ]
   },
   {
     "id": "123",
     "title": "Code of HuffmanWeb",
-    "desc": "Code of Huffman did to a work to university.",
+    "desc": "Code of Huffman did to a work to university.App to learn and improve my angular skills.App to learn and improve my angular skills.",
     "link": {
       "gitHub": "https://github.com/JosuePimentel/huffman"
     },
     "image": "assets/media/photo/teste.png",
-    "type": "Web"
+    "type": "Web",
+    "tecnologies": [
+      "Angular",
+      "Typescript",
+      "HTML/CSS"
+    ]
   },
   {
     "id": "124",
@@ -39,6 +54,11 @@
       "web": "https//countryborders.com"
     },
     "image": "assets/media/photo/teste.png",
-    "type": "Terminal"
+    "type": "Terminal",
+    "tecnologies": [
+      "Angular",
+      "Typescript",
+      "HTML/CSS"
+    ]
   }
 ]
