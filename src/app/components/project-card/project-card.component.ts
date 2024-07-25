@@ -15,5 +15,6 @@ type social = { link: string, svg: string };
 export class ProjectCardComponent {
   @Input({required: true}) data: ProjectsInterface | undefined;
 
+
   constructor() {}
 }
