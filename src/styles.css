@@ -9,6 +9,10 @@
     border: none;
   }
 
+  p {
+    margin: 0 !important;
+  }
+
   ::-webkit-scrollbar {
     @apply w-[10px] bg-transparent;
   }
@@ -47,4 +51,11 @@
   .apear {
     @apply block;
   }
+
+  .link {
+    @apply hover:font-semibold font-medium text-white ps-1;
+  }
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

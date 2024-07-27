@@ -4,6 +4,7 @@ import { ProjectsWebService } from '../../services/projects-web.service';
 import { ProjectCardComponent } from '../../components/project-card/project-card.component';
 import { LoadComponent } from '../../components/load/load.component';
 import { DropDownComponent } from '../../components/drop-down/drop-down.component';
+import {TooltipPosition, MatTooltipModule} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-projects',
@@ -11,7 +12,8 @@ import { DropDownComponent } from '../../components/drop-down/drop-down.componen
   imports: [
     ProjectCardComponent,
     LoadComponent,
-    DropDownComponent
+    DropDownComponent,
+    MatTooltipModule
   ],
   templateUrl: './projects.component.html',
 })

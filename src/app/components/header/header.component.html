@@ -1,23 +1,26 @@
 <header
-  class="flex p-5 h-20 w-[60%] justify-evenly items-center dark:bg-gray border-[0.5px] dark:border-gray shadow-boxShadow dark:shadow-white border-solid text-white rounded-md my-14 mx-[20%] box-border"
+  class="flex p-5 h-20 w-[60%] justify-evenly items-center dark:bg-gray border-[0.5px] dark:border-gray shadow-boxShadow dark:shadow-white border-solid text-white rounded-md my-14 mx-[20%] box-border max-[425px]:mx-[5%] max-[425px]:w-[90%] max-lg:mx-[10%] max-lg:w-[80%]"
 >
-  <ul class="flex items-center justify-center gap-6">
+  <ul class="flex items-center justify-center gap-6 max-[425px]:gap-3 max-[350px]:gap-1">
     @for (button of buttons; track $index) {
     <li
       [routerLink]="button.router"
       routerLinkActive="active"
-      class="cursor-pointer relative py-3 px-0.5 hover:active"
+      class="cursor-pointer relative py-3 px-0.5 hover:active max-md:text-sm max-[425px]:text-xs"
     >
       {{ button.translante }}
     </li>
     }
   </ul>
 
-  <div class="flex content-between items-center gap-7">
-    <app-dark-mode class="flex" />
+  <div class="flex content-between items-center gap-7 relative">
+    <span class="material-symbols-outlined cursor-pointer hidden max-md:block text-3xl" (click)="openMenu = !openMenu">menu</span>
+    <div class="py-2 px-3 content-between items-center gap-7 flex max-md:absolute {{ openMenu ? ' -bottom-12 oapcity-100 ' : ' max-md:-bottom-10 max-md:opacity-0 '}}  max-md:-left-8 bg-gray border-[2px] border-transparent max-md:border-lightGray border-solid rounded-md z-10 ">
+      <app-dark-mode class="flex" />
 
-    <div class="flex content-between items-center">
-      <span class="material-symbols-outlined cursor-pointer"> language </span>
+      <div class="flex content-between items-center">
+        <span class="material-symbols-outlined cursor-pointer"> language </span>
+      </div>
     </div>
   </div>
 </header>

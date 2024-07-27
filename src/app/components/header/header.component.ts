@@ -15,6 +15,7 @@ type button = { router: string; translante: string };
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {
+  openMenu: boolean = false;
   buttons: button[] = [
     {
       router: 'home',

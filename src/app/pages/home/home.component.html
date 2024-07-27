@@ -5,18 +5,30 @@
 
   <p class="w-[500px] max-w-full text-2xl font-semibold rounded-sm text-justify"> <span class="text-secondaryColor">Olá! Meu nome é Josué Pimentel,</span> sou Ciêntista da computação, Maker e Desenvolvedor Front-end.</p>
 
-  <p class="w-[500px] max-w-full text-lightGray text-base text-justify"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, enim quam nostrum perferendis asperiores soluta molestias vitae sed, pariatur, provident amet dolorem. Est pariatur voluptatibus architecto itaque dicta inventore autem. </p>
+  <p class="w-[500px] max-w-full text-lightGray text-base text-justify">
+    Comecei na área da programação em 2021 estudando HTML, CSS e JS, em sites de curso em vídeo gratuítos. Desde então comecei a me interessar e aprofundar mais ainda nos conteúdos da programação WEB, estudando conceitos básicos e avançados como, <i class="font-semibold">Responsivadade</i>, <i class="font-semibold">Flex/Grid</i>, <i class="font-semibold">Sites Dinânimos</i>, além de framework's, bibliotecas e Linguagens front-end como, <i class="font-semibold">Angular</i>, <i class="font-semibold">SASS</i>, <i class="font-semibold">Tailwind CSS</i>, <i class="font-semibold">React JS</i>, <i class="font-semibold">Typescript</i>, <a routerLink="" matTooltip="Veja meu curriculo" matTooltipPosition="below" class="link">entre outras</a>.
+  </p>
+
+  <p class="w-[500px] max-w-full text-lightGray text-base text-justify">
+    Até que em 2023 ingressei no curso de Bacharel em Ciências da Computação no <a target="_blank" href="https://www.ifgoiano.edu.br/home/index.php/rio-verde.html" class="link">Instituto Federal Goiano - Campus Rio Verde/GO</a> (IFGRV). Desde a minha inscrição no curso participei e participo de alguns projetos voltados as áreas de Programação Competitiva (<a target="_blank" href="https://ifgoianoobi.blogspot.com/" class="link">Projeto Programação Competitiva em Rio Verde - PCRV</a>) e Cultura Maker (<a target="_blank" href="https://www.instagram.com/iflabmakerrv/" class="link">Lab Maker - IFGRV</a>).
+  </p>
+
+  <p class="w-[500px] max-w-full text-lightGray text-base text-justify">
+    Desde a minha participação nesses projetos na instituição, participei de diversas maratonas de programação locais (<a target="_blank" href="https://ifgoianoobi.blogspot.com/2023/08/quarto-abobora-contest.html" class="link">Abobora Contest</a>) e regionais (<a target="_blank" href="https://www.instagram.com/maratonadeprogramacao/" class="link">Maratona SBC</a>, <a target="_blank" href="https://www.instagram.com/olimpinf/" class="link">OBI</a>). Além de cursos na area da Impressão e Modelagem 3D, oferecidos pelo <a target="_blank" href="https://www.instagram.com/iflabmakerrv/" class="link">Laboratório maker do IFGRV</a>
+  </p>
 
   <div class="flex gap-5">
     @for (item of socialMedia; track $index) {
       <app-social-media
         [socialLink]="item.link"
         [socialSVG]="item.svg"
+        [matTooltip]="item.name"
+        matTooltipPosition="below"
       />
     }
   </div>
 
-  <div class="flex justify-center items-center gap-16 relative top-0 mt-4 mb-20">
+  <div class="flex justify-center items-center gap-16 relative top-0 mt-4 mb-20 max-[425px]:mb-10">
     @for (item of photos; track $index) {
       <app-card-photo
         [img]="item"
