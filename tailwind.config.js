@@ -15,7 +15,7 @@ module.exports = {
       black: '#000',
       gray: '#333',
       lightGray: '#6f6f76',
-
+      primaryColorLight: "#fafafa"
     },
     fontFamily: {
       default: "Poppins, normal",

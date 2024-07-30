@@ -28,7 +28,7 @@
   }
 
   .active {
-    @apply before:content-[''] before:block before:w-full before:h-[2px] before:rounded-sm before:bg-white before:absolute before:bottom-0 before:left-0;
+    @apply before:content-[''] before:block before:w-full before:h-[2px] before:rounded-sm before:dark:bg-white before:bg-black before:absolute before:bottom-0 before:left-0;
   }
 
   .colorSVG svg {
@@ -40,7 +40,7 @@
   }
 
   .activeFooter {
-    @apply text-white;
+    @apply text-black dark:text-white;
   }
 
   .separator {
@@ -53,7 +53,7 @@
   }
 
   .link {
-    @apply hover:font-semibold font-medium text-white ps-1;
+    @apply hover:font-extrabold font-bold dark:font-medium text-black ps-1 dark:text-white;
   }
 }
 

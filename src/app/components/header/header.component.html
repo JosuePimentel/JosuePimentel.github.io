@@ -1,5 +1,5 @@
 <header
-  class="flex p-5 h-20 w-[60%] justify-evenly items-center dark:bg-gray border-[0.5px] dark:border-gray shadow-boxShadow dark:shadow-white border-solid text-white rounded-md my-14 mx-[20%] box-border max-[425px]:mx-[5%] max-[425px]:w-[90%] max-lg:mx-[10%] max-lg:w-[80%]"
+  class="flex p-5 h-20 w-[60%] justify-evenly items-center text-black border-primaryColorLight bg-primaryColorLight dark:bg-gray border-[0.5px] dark:border-gray shadow-boxShadow dark:shadow-white border-solid dark:text-white rounded-md my-14 mx-[20%] box-border max-[425px]:mx-[5%] max-[425px]:w-[90%] max-lg:mx-[10%] max-lg:w-[80%]"
 >
   <ul class="flex items-center justify-center gap-6 max-[425px]:gap-3 max-[350px]:gap-1">
     @for (button of buttons; track $index) {
@@ -15,7 +15,7 @@
 
   <div class="flex content-between items-center gap-7 relative">
     <span class="material-symbols-outlined cursor-pointer hidden max-md:block text-3xl" (click)="openMenu = !openMenu">menu</span>
-    <div class="py-2 px-3 content-between items-center gap-7 flex max-md:absolute {{ openMenu ? ' -bottom-12 oapcity-100 ' : ' max-md:-bottom-10 max-md:opacity-0 '}}  max-md:-left-8 bg-gray border-[2px] border-transparent max-md:border-lightGray border-solid rounded-md z-10 ">
+    <div class="py-2 px-3 content-between items-center gap-7 flex max-md:absolute {{ openMenu ? ' -bottom-12 oapcity-100 ' : ' max-md:-bottom-10 max-md:opacity-0 '}}  max-md:-left-8 dark:bg-gray border-[2px] border-transparent max-md:dark:border-lightGray max-md:border-black border-solid rounded-md z-10 bg-primaryColorLight">
       <app-dark-mode class="flex" />
 
       <div class="flex content-between items-center">
