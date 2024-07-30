@@ -15,7 +15,7 @@
 
   <div class="flex content-between items-center gap-7 relative">
     <span class="material-symbols-outlined cursor-pointer hidden max-md:block text-3xl" (click)="openMenu = !openMenu">menu</span>
-    <div class="py-2 px-3 content-between items-center gap-7 flex max-md:absolute {{ openMenu ? ' -bottom-12 oapcity-100 ' : ' max-md:-bottom-10 max-md:opacity-0 '}}  max-md:-left-8 dark:bg-gray border-[2px] border-transparent max-md:dark:border-lightGray max-md:border-black border-solid rounded-md z-10 bg-primaryColorLight">
+    <div class="py-2 px-3 content-between items-center gap-7 max-md:absolute flex {{ openMenu ? ' -bottom-12 oapcity-100 z-10 ' : ' max-md:-bottom-10 max-md:opacity-0 -z-10 '}}  max-md:-left-8 dark:bg-gray border-[2px] border-transparent max-md:dark:border-lightGray max-md:border-black border-solid rounded-md z-10 bg-primaryColorLight">
       <app-dark-mode class="flex" />
 
       <div class="flex content-between items-center">

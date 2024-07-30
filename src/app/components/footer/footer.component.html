@@ -1,17 +1,17 @@
-<footer class="text-lightGray flex items-center justify-between w-full pt-6 text-sm separator max-lg:flex-col max-lg:gap-3">
+<footer class="text-lightGray flex items-center justify-between w-full pt-6 text-sm separator max-[900px]:flex-col max-[900px]:gap-3">
 
   <ul class="flex items-center justify-center gap-6">
     @for (button of buttons; track $index) {
     <li
       [routerLink]="button.router"
       routerLinkActive="activeFooter"
-      class="cursor-pointer relative py-3 px-0.5 hover:activeFooter max-[1600px]:text-sm max-[1440px]:text-xs max-lg:text-base"
+      class="cursor-pointer relative py-3 px-0.5 hover:activeFooter max-lg:text-sm max-[1500px]:text-sm max-[1600px]:text-base max-[1350px]:text-xs"
     >
       {{ button.translante }}
     </li>
     }
   </ul>
 
-  <p class="max-[1600px]:text-sm max-[1440px]:text-xs max-lg:text-base max-lg:text-center">© josue.pimentel.github.io - All rights reserved.</p>
+  <p class="max-lg:text-sm max-[1350px]:text-xs max-[1600px]:text-base max-[1500px]:text-sm max-lg:text-center">© josue.pimentel.github.io - All rights reserved.</p>
 
 </footer>

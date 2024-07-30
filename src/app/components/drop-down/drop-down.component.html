@@ -4,7 +4,7 @@
     <span class="material-symbols-outlined">keyboard_arrow_down</span>
   </div>
 
-  <ul class="absolute bg-gray left-0 w-full border-[2px] border-lightGray border-solid rounded-md z-10 {{showDrop ? 'opacity-100 top-[45px]' : 'top-[35px] opacity-0'}}">
+  <ul class="absolute bg-primaryColorLight dark:bg-gray left-0 w-full border-[2px] border-lightGray border-solid rounded-md z-10 {{showDrop ? 'opacity-100 top-[45px]' : 'top-[35px] opacity-0'}}">
     @for (item of filters; track $index) {
       <li class="px-3 py-1 hover:opacity-65 cursor-pointer" (click)="changeFilter(item)">{{item}}</li>
     }
