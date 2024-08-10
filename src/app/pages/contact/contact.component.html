@@ -1,21 +1,19 @@
-<div class="w-full h-auto flex justify-center">
-  <form action="https://formsubmit.co/josue.farias.pimentel@gmail.com" method="POST" name="form" class="w-full max-w-[600px] max-[1300px]:px-0 flex flex-col rounded-md px-10 relative">
-    <h2 class="self-start text-3xl pb-5 font-semibold text-center">Contato</h2>
-    <div class="flex items-center gap-3 mb-5 relative max-md:flex-col max-md:items-start">
-      <label for="name" class="transition-all {{nameFocused ? ' dark:text-white relative ' : ''}} max-md:dark:text-white max-md:relative left-0 px-6 text-lightGray absolute gap-1 flex after:content-['*'] after:text-secondaryColor">Nome Completo</label>
-      <input type="text" [(ngModel)]="name" id="name" name="name" class="transition-all grow px-5 py-1 max-md:w-full max-md:shadow-boxShadow max-md:shadow-black bg-white rounded-lg border-4 border-white text-black border-solid" (focus)="clickName($event)">
-    </div>
-    <div class="flex items-center gap-3 mb-5 relative max-md:flex-col max-md:items-start">
-      <label for="email" class="transition-all {{emailFocused ? ' dark:text-white relative ' : ''}} max-md:dark:text-white max-md:relative left-0 px-6 text-lightGray absolute gap-1 flex after:content-['*'] after:text-secondaryColor">Email</label>
-      <input type="text" [(ngModel)]="email" id="email" name="email" class="transition-all grow px-5 py-1 bg-white rounded-lg border-4 border-white text-black border-solid max-md:w-full max-md:shadow-boxShadow max-md:shadow-black" (focus)="clickEmail($event)">
-    </div>
-    <div class="flex  gap-3 mb-5 relative {{descFocused ? 'flex-col' : 'items-center'}} max-md:flex-col max-md:items-start">
-      <label for="desc" class="transition-all {{descFocused ? ' dark:text-white relative ' : ''}} max-md:dark:text-white max-md:relative left-0 px-6 text-lightGray absolute gap-1 flex">Descrição</label>
-      <textarea name="desc" id="desc" class="{{descFocused ? ' max-md:ms-0 ms-6' : ''}} transition-all grow px-5 py-2 bg-white rounded-lg border-4 border-white text-black border-solid max-md:w-full max-md:shadow-boxShadow max-md:shadow-black" [rows]="1" (focus)="clickDesc($event)" ></textarea>
-    </div>
+<form action="https://formsubmit.co/josue.farias.pimentel@gmail.com" method="POST" name="form" class="w-full max-w-[600px] max-[1300px]:px-0 flex flex-col rounded-md px-10 relative">
+  <h2 class="self-start text-3xl pb-5 font-semibold text-center">Contato</h2>
+  <div class="flex items-center gap-3 mb-5 relative max-md:flex-col max-md:items-start">
+    <label for="name" class="transition-all {{nameFocused ? ' dark:text-white relative ' : ''}} max-md:dark:text-white max-md:relative left-0 px-6 text-lightGray absolute gap-1 flex after:content-['*'] after:text-secondaryColor">Nome Completo</label>
+    <input type="text" [(ngModel)]="name" id="name" name="name" class="transition-all grow px-5 py-1 max-md:w-full max-md:shadow-boxShadow max-md:shadow-black bg-white rounded-lg border-4 border-white text-black border-solid" (focus)="clickName($event)">
+  </div>
+  <div class="flex items-center gap-3 mb-5 relative max-md:flex-col max-md:items-start">
+    <label for="email" class="transition-all {{emailFocused ? ' dark:text-white relative ' : ''}} max-md:dark:text-white max-md:relative left-0 px-6 text-lightGray absolute gap-1 flex after:content-['*'] after:text-secondaryColor">Email</label>
+    <input type="text" [(ngModel)]="email" id="email" name="email" class="transition-all grow px-5 py-1 bg-white rounded-lg border-4 border-white text-black border-solid max-md:w-full max-md:shadow-boxShadow max-md:shadow-black" (focus)="clickEmail($event)">
+  </div>
+  <div class="flex  gap-3 mb-5 relative {{descFocused ? 'flex-col' : 'items-center'}} max-md:flex-col max-md:items-start">
+    <label for="desc" class="transition-all {{descFocused ? ' dark:text-white relative ' : ''}} max-md:dark:text-white max-md:relative left-0 px-6 text-lightGray absolute gap-1 flex">Descrição</label>
+    <textarea name="desc" id="desc" class="{{descFocused ? ' max-md:ms-0 ms-6' : ''}} transition-all grow px-5 py-2 bg-white rounded-lg border-4 border-white text-black border-solid max-md:w-full max-md:shadow-boxShadow max-md:shadow-black" [rows]="1" (focus)="clickDesc($event)" ></textarea>
+  </div>
 
-    <div class="w-full flex justify-end">
-      <button type="submit" class="w-max py-1 px-4 hover:bg-white hover:text-black border-2 border-black dark:border-white border-solid rounded-md" (click)="submit($event)">Enviar</button>
-    </div>
-  </form>
-</div>
+  <div class="w-full flex justify-end">
+    <button type="submit" class="w-max py-1 px-4 hover:bg-white hover:text-black border-2 border-black dark:border-white border-solid rounded-md" (click)="submit($event)">Enviar</button>
+  </div>
+</form>

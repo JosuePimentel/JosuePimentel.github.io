@@ -19,6 +19,9 @@ type social = { name: string, link: string, svg: string };
     MatTooltipModule
   ],
   templateUrl: './home.component.html',
+  host: {
+    'class': 'w-full h-full relative flex flex-col gap-14'
+  }
 })
 export class HomeComponent implements OnInit{
   socialMedia: social[] = [

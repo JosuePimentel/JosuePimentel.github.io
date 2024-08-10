@@ -8,6 +8,9 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   templateUrl: './contact.component.html',
+  host: {
+    'class': 'w-full h-auto flex justify-center'
+  }
 })
 export class ContactComponent {
   nameFocused: boolean = false;

@@ -5,6 +5,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './drop-down.component.html',
+  host: {
+    'class': 'w-[120px] h-[40px] flex items-center rounded-md border-[2px] border-lightGray border-solid relative'
+  }
 })
 export class DropDownComponent implements OnInit {
   @Input({ required: true }) filters: string[] = [];

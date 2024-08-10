@@ -13,6 +13,9 @@ type social = { link: string, svg: string };
     MatTooltipModule
   ],
   templateUrl: './project-card.component.html',
+  host: {
+    'class': 'w-full rounded-md relative overflow-hidden cursor-pointer group'
+  }
 })
 export class ProjectCardComponent {
   @Input({required: true}) data: ProjectsInterface | undefined;

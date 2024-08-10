@@ -1,26 +1,22 @@
-<header
-  class="flex p-5 h-20 w-[60%] justify-evenly items-center text-black border-primaryColorLight bg-primaryColorLight dark:bg-gray border-[0.5px] dark:border-gray shadow-boxShadow dark:shadow-white border-solid dark:text-white rounded-md my-14 mx-[20%] box-border max-[425px]:mx-[5%] max-[425px]:w-[90%] max-lg:mx-[10%] max-lg:w-[80%]"
->
-  <ul class="flex items-center justify-center gap-6 max-[425px]:gap-3 max-[350px]:gap-1">
-    @for (button of buttons; track $index) {
-    <li
-      [routerLink]="button.router"
-      routerLinkActive="active"
-      class="cursor-pointer relative py-3 px-0.5 hover:active max-md:text-sm max-[425px]:text-xs"
-    >
-      {{ button.translante }}
-    </li>
-    }
-  </ul>
+<ul class="flex items-center justify-center gap-6 max-[425px]:text-xs">
+  @for (button of buttons; track $index) {
+  <li
+    [routerLink]="button.router"
+    routerLinkActive="active"
+    class="cursor-pointer relative py-3 px-0.5 hover:active"
+  >
+    {{ button.translante }}
+  </li>
+  }
+</ul>
 
-  <div class="flex content-between items-center gap-7 relative">
-    <span class="material-symbols-outlined cursor-pointer hidden max-md:block text-3xl" (click)="openMenu = !openMenu">menu</span>
-    <div class="py-2 px-3 content-between items-center gap-7 max-md:absolute flex {{ openMenu ? ' -bottom-12 oapcity-100 z-10 ' : ' max-md:-bottom-10 max-md:opacity-0 -z-10 '}}  max-md:-left-8 dark:bg-gray border-[2px] border-transparent max-md:dark:border-lightGray max-md:border-black border-solid rounded-md z-10 bg-primaryColorLight">
-      <app-dark-mode class="flex" />
+<div class="flex content-between items-center gap-7 relative">
+  <span class="material-symbols-outlined cursor-pointer hidden max-md:block text-3xl max-[425px]:text-2xl" (click)="openMenu = !openMenu">menu</span>
+  <div class="transition-all py-2 px-3 content-between items-center gap-7 max-md:absolute flex {{ openMenu ? ' -bottom-12 oapcity-100 z-10 ' : ' max-md:-bottom-10 max-md:opacity-0 -z-10 '}}  max-md:-left-9 dark:bg-gray border-[2px] border-transparent max-md:dark:border-lightGray max-md:border-black border-solid rounded-md z-10 bg-primaryColorLight">
+    <app-dark-mode class="flex" />
 
-      <div class="flex content-between items-center">
-        <span class="material-symbols-outlined cursor-pointer"> language </span>
-      </div>
+    <div class="flex content-between items-center">
+      <span class="material-symbols-outlined cursor-pointer"> language </span>
     </div>
   </div>
-</header>
+</div>
