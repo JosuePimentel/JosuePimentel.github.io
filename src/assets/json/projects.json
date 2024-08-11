@@ -1,64 +1,68 @@
 [
   {
     "id": "123",
-    "title": "Code of HuffmanWeb",
-    "desc": "Code of Huffman did to a work to university.",
+    "title": "Country App",
+    "desc": "Primeiro projeto feito para praticar o Angular.",
     "link": {
-      "gitHub": "https://github.com/JosuePimentel/huffman"
+      "gitHub": "https://github.com/JosuePimentel/Country",
+      "web": "https://countries-of-world.vercel.app/"
     },
-    "image": "assets/media/photo/teste.png",
+    "image": "/assets/media/photo/countryApp.png",
     "type": "Web",
     "tecnologies": [
+      "HTML",
+      "CSS",
       "Angular",
       "Typescript",
-      "HTML/CSS"
+      "Tailwind CSS"
     ]
   },
   {
     "id": "124",
-    "title": "App Borders of CountriesTerminal",
-    "desc": "App to learn and improve my angular skills.App to learn and improve my angular skills.",
+    "title": "Calculator App",
+    "desc": "Projeto de calculadora feita para treinar o Javascript.",
     "link": {
-      "gitHub": "https://github.com/JosuePimentel/Country",
-      "web": "https://countryborders.com"
+      "gitHub": "https://github.com/JosuePimentel/Calculator",
+      "web": "https://calculator-josuepimentel.vercel.app/"
     },
-    "image": "assets/media/photo/teste.png",
-    "type": "Terminal",
-    "tecnologies": [
-      "Angular",
-      "Typescript",
-      "HTML/CSS"
-    ]
-  },
-  {
-    "id": "123",
-    "title": "Code of HuffmanWeb",
-    "desc": "Code of Huffman did to a work to university.App to learn and improve my angular skills.App to learn and improve my angular skills.",
-    "link": {
-      "gitHub": "https://github.com/JosuePimentel/huffman"
-    },
-    "image": "assets/media/photo/teste.png",
+    "image": "/assets/media/photo/calculatorApp.png",
     "type": "Web",
     "tecnologies": [
-      "Angular",
-      "Typescript",
-      "HTML/CSS"
+      "HTML",
+      "CSS",
+      "JS"
     ]
   },
   {
-    "id": "124",
-    "title": "App Borders of CountriesTerminal",
-    "desc": "App to learn and improve my angular skills.",
+    "id": "125",
+    "title": "Jogo da Velha",
+    "desc": "Projeto para treinar Javascript.",
     "link": {
-      "gitHub": "https://github.com/JosuePimentel/Country",
-      "web": "https//countryborders.com"
+      "gitHub": "https://github.com/JosuePimentel/jogoDaVelhaHTML",
+      "web": "https://jogo-da-velha-html.vercel.app/"
     },
-    "image": "assets/media/photo/teste.png",
-    "type": "Terminal",
+    "image": "/assets/media/photo/jogoDaVelhaApp.png",
+    "type": "Web",
     "tecnologies": [
-      "Angular",
-      "Typescript",
-      "HTML/CSS"
+      "HTML",
+      "CSS",
+      "JS"
+    ]
+  },
+  {
+    "id": "126",
+    "title": "ToDo List",
+    "desc": "Projeto feito para treinar JS.",
+    "link": {
+      "gitHub": "https://github.com/JosuePimentel/Todo-List",
+      "web": "https://todo-list-josuepimentel.vercel.app/"
+    },
+    "image": "/assets/media/photo/todolist.png",
+    "type": "Web",
+    "tecnologies": [
+      "HTML",
+      "CSS",
+      "JS"
     ]
   }
 ]
