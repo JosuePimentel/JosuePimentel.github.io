@@ -64,5 +64,65 @@
       "CSS",
       "JS"
     ]
+  },
+  {
+    "id": "127",
+    "title": "Jogo da Velha em C",
+    "desc": "Jogo Da Velha feito em c, para treinar a linguagem.",
+    "link": {
+      "gitHub": "https://github.com/JosuePimentel/Jogo-Da-Velha"
+    },
+    "type": "Terminal",
+    "tecnologies": [
+      "C"
+    ]
+  },
+  {
+    "id": "128",
+    "title": "Jogo do Labirinto em C",
+    "desc": "Jogo do labirinto feito em c, para treinar a linguagem c.",
+    "link": {
+      "gitHub": "https://github.com/JosuePimentel/jogo_Labirinto"
+    },
+    "type": "Terminal",
+    "tecnologies": [
+      "C"
+    ]
+  },
+  {
+    "id": "129",
+    "title": "Sudoku",
+    "desc": "Jogo Sudoku feito para treinar a linguagem C.",
+    "link": {
+      "gitHub": "https://github.com/JosuePimentel/sudoku"
+    },
+    "type": "Terminal",
+    "tecnologies": [
+      "C"
+    ]
+  },
+  {
+    "id": "130",
+    "title": "ToDo C",
+    "desc": "To Do feito em c para treinar a linguagem.",
+    "link": {
+      "gitHub": "https://github.com/JosuePimentel/to-do-C"
+    },
+    "type": "Terminal",
+    "tecnologies": [
+      "C"
+    ]
+  },
+  {
+    "id": "131",
+    "title": "Encriptador de senha",
+    "desc": "Encriptador de Senha feito em c para treinar a linguagem.",
+    "link": {
+      "gitHub": "https://github.com/JosuePimentel/cripSenha_C"
+    },
+    "type": "Terminal",
+    "tecnologies": [
+      "C"
+    ]
   }
 ]

@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { ProjectsInterface } from '../../module/interfaces/projects.interface';
 import { SocialMediaComponent } from '../social-media/social-media.component';
 import { MatTooltipModule, TooltipPosition} from '@angular/material/tooltip';
+import { CommonModule } from '@angular/common';
 
 type social = { link: string, svg: string };
 
@@ -10,11 +11,12 @@ type social = { link: string, svg: string };
   standalone: true,
   imports: [
     SocialMediaComponent,
-    MatTooltipModule
+    MatTooltipModule,
+    CommonModule
   ],
   templateUrl: './project-card.component.html',
   host: {
-    'class': 'w-full rounded-md relative overflow-hidden cursor-pointer group'
+    'class': 'w-full h-[250px] rounded-md relative overflow-hidden cursor-pointer group'
   }
 })
 export class ProjectCardComponent {

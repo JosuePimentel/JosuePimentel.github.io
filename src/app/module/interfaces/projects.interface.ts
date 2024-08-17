@@ -6,6 +6,8 @@ export interface ProjectsInterface {
   desc: string;
   link: LinksInterface;
   image: string;
-  type: string;
+  type: tipo;
   tecnologies: string[];
 }
+
+type tipo = 'Terminal' | 'Web';
